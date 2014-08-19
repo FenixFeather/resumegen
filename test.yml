@@ -1,0 +1,49 @@
+name: Commander Shepard
+
+contact:
+  address1: 4 Privet Drive
+  address2: Urbana, IL
+  email: 42@42.com
+  website1: bla.com
+  website2: github.com/bla
+
+sidebar:
+  - heading: Technical skills
+    line1: Python, Java, Bash, Jquery, HTML
+    line2: Git, LaTeX, Blender, Inkscape
+    line3: Ubuntu, Windows
+
+  - heading: Interests
+    line1: Eating, sleeping, drinking.
+
+main:
+  Education:
+    - heading: BS Computer Science
+      time: 2013-
+      qualifier: University of Illinois @ Urbana Champaign
+      line1: Chancellor's Scholar
+      line2: James Scholar
+      line3: "GPA: 42"
+
+  Work:
+    - heading: Facebook internship
+      time: "2042"
+      qualifier: In my imagination
+      line1: I programmed a lot of really cool stuff for FB
+      
+    - heading: I ate stuff.
+      time: 1964-
+      qualifier: With my mouth
+      line1: I eat food
+
+  Other:
+    - heading: ""
+      time: 44
+      qualifier: McClintock High School
+      line1: I ate food and stuff
+      
+fonts:
+  main: Ubuntu 
+  auxiliary: Ubuntu Condensed
+  heading: Ubuntu Medium
+  title: Ubuntu Condensed
