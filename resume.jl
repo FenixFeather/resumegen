@@ -28,7 +28,7 @@ end
 SidebarEntry(sidebar_info::Dict) =
     try
         SidebarEntry(
-                     get_entry_lines(sidebar_info, "line"),
+                     sidebar_info["desc"],
                      sidebar_info["heading"],
                      )
     catch ee
@@ -38,7 +38,7 @@ SidebarEntry(sidebar_info::Dict) =
 MainEntry(main_info::Dict) =
     try
         MainEntry(
-                  get_entry_lines(main_info, "line"),
+                  main_info["desc"],
                   main_info["heading"],
                   string(main_info["time"]),
                   main_info["qualifier"],
@@ -50,10 +50,10 @@ MainEntry(main_info::Dict) =
 ContactEntry(contact_info::Dict) =
     try
         ContactEntry(
-                     get_entry_lines(contact_info, "line"),
-                     get_entry_lines(contact_info, "address"),
+                     get(contact_info, "line", [""]),
+                     contact_info["address"],
                      contact_info["email"],
-                     get_entry_lines(contact_info, "website"),
+                     contact_info["website"],
                      )
     catch ee
         print_fielderror_info(ee, contact_info)
@@ -157,6 +157,8 @@ function get_entry_lines(entry_dict::Dict, prefix::String)
                    sort(collect(keys(entry_dict))))
     return String[string(entry_dict[line]) for line in lines]
 end
+
+
 
 
     
